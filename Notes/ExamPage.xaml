@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Notes.ExamPage">
+    <ContentPage.Content>
+        <StackLayout RadioButtonGroup.GroupName="Q"
+                     RadioButtonGroup.SelectedValue="C">
+            <Label Text="1." x:Name="labelno"/>
+            <Label Text="{Binding Title}" x:Name="labelTitle"/>
+            <RadioButton Content="{Binding A}"
+                         Value="A"
+                         CheckedChanged="RadioButton_CheckedChanged"
+                         x:Name="RadioA"/>
+            <RadioButton Content="{Binding B}"
+                         Value="B"
+                         CheckedChanged="RadioButton_CheckedChanged"
+                         x:Name="RadioB"/>
+            <RadioButton Content="{Binding C}"
+                         Value="C"
+                         CheckedChanged="RadioButton_CheckedChanged"
+                         x:Name="RadioC"/>
+            <RadioButton Content="{Binding D}"
+                         Value="D"
+                         CheckedChanged="RadioButton_CheckedChanged"
+                         x:Name="RadioD"/>
+            <RadioButton Content="{Binding Answer}"
+                         IsVisible="false" />
+            <StackLayout>
+                <Button Text="上一題"
+                        HorizontalOptions="Center"
+                        Clicked="PreButton_Clicked"/>
+                <Button Text="下一題"
+                        HorizontalOptions="Center"
+                        Clicked="NextButton_Clicked"/>
+                <Button Text="交卷"
+                        HorizontalOptions="Center"
+                        Clicked="DoenButton_Clicked"/>
+            </StackLayout>
+            
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
